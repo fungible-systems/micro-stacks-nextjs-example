@@ -25,6 +25,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       dehydratedState={pageProps?.dehydratedState}
       onPersistState={onPersistState}
       onSignOut={onSignOut}
+      network="testnet"
     >
       <Component {...pageProps} />
     </ClientProvider>

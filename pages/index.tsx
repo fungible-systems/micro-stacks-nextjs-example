@@ -2,6 +2,7 @@ import styles from '../styles/Home.module.css';
 import { WalletConnectButton } from '../components/wallet-connect-button';
 import { UserCard } from '../components/user-card';
 import { getDehydratedStateFromSession } from '../common/session-helpers';
+import { TransactionSigning } from '../components/transaction-signing';
 
 import type { NextPage, GetServerSidePropsContext } from 'next';
 
@@ -22,6 +23,7 @@ const Home: NextPage = () => {
         </h1>
         <UserCard />
         <WalletConnectButton />
+        <TransactionSigning />
       </main>
     </div>
   );
