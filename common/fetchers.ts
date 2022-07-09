@@ -34,3 +34,13 @@ export const destroySession = async () => {
     console.error(e);
   }
 };
+
+export const sponsorTransaction = async (txHex: string) => {
+  const res = await fetch(APP_URL + '/api/sponsor', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ txHex }),
+  })
+  const data = await res.json();
+  return data.txid as string;
+}
